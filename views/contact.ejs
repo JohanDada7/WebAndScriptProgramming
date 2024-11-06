@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %> - My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/custom.css' />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'home' ? 'active' : '' %>" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'about' ? 'active' : '' %>" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'projects' ? 'active' : '' %>" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'contact' ? 'active' : '' %>" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-4" style="place-items: center; padding:  50px;">
+
+    <div class="contact-container">
+      <section id="contact">
+          <h2>Contact Me</h2>
+          
+          <% if (locals.success) { %>
+              <div class="alert alert-success">
+                  <%= success %>
+              </div>
+          <% } %>
+
+          <% if (locals.error) { %>
+              <div class="alert alert-error">
+                  <%= error %>
+              </div>
+          <% } %>
+
+          <form class="contact-form" action="/about" >
+              <div class="form-group">
+                  <label for="name">Tell me your name</label>
+                  <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required 
+                      value="<%= locals.formData ? formData.name : '' %>"
+                  >
+                  <% if (locals.errors && errors.name) { %>
+                      <div class="error-text"><%= errors.name %></div>
+                  <% } %>
+              </div>
+
+              <div class="form-group">
+                  <label for="email">Tell me your email</label>
+                  <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required
+                      value="<%= locals.formData ? formData.email : '' %>"
+                  >
+                  <% if (locals.errors && errors.email) { %>
+                      <div class="error-text"><%= errors.email %></div>
+                  <% } %>
+              </div>
+
+              <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea 
+                      id="message" 
+                      name="message" 
+                      required
+                  ><%= locals.formData ? formData.message : '' %></textarea>
+                  <% if (locals.errors && errors.message) { %>
+                      <div class="error-text"><%= errors.message %></div>
+                  <% } %>
+              </div>
+
+              <div class="form-group">
+                  <label for="captcha">What is 2 + 2?</label>
+                  <input 
+                      type="text" 
+                      id="captcha" 
+                      name="captcha" 
+                      required
+                  >
+                  <% if (locals.errors && errors.captcha) { %>
+                      <div class="error-text"><%= errors.captcha %></div>
+                  <% } %>
+              </div>
+
+              <button type="submit">Submit</button>
+          </form>
+      </section>
+  </div>
+
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-light" style="position: relative;">
+    <div class="container text-center">
+      <span class="text-muted">&copy; 2024 Johan Dada. All Rights Reserved.</span>
+      <a href="#" class="ms-3"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/johan-dada-33bbb12ba/" class="ms-3"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

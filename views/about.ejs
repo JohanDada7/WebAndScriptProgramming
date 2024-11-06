@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %> - My Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="/images/profile.jpg">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/custom.css' />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'home' ? 'active' : '' %>" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'about' ? 'active' : '' %>" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'projects' ? 'active' : '' %>" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'contact' ? 'active' : '' %>" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="about-container">
+    <div class="about-header">
+        <h1 class="about-title">About Me</h1>
+        <p class="about-subtitle">Student | Creative Problem Solver | Tech Enthusiast</p>
+    </div>
+
+    <div class="about-content">
+        <div class="profile-section">
+            <img src="/images/profile.jpg" alt="Profile Picture" class="profile-image">
+            <p class="bio-text">
+              Hi! My name is Johan Dada, and I'm a Nigerian student 
+              taking the Web development course 
+              at Ontario tech university. 
+              I am 19 years old and I love to play soccer.
+            </p>
+            <p class="bio-text">
+                
+            </p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/johan-dada-33bbb12ba/" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <h2 class="skills-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML5</div>
+                <div class="skill-item">CSS3</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">Express</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h2 class="highlight-title">What I Do</h2>
+        <p>
+            I specialize in building modern web applications with a focus on performance, 
+            scalability, and user experience. My approach combines technical expertise 
+            with creative problem-solving to deliver outstanding results.
+        </p>
+    </div>
+
+    <div class="video-section">
+        <h2 class="video-title">Watch My Introduction</h2>
+        <div class="video-container">
+            <!-- Option 1: Self-hosted video -->
+            <video controls poster="/images/video-thumbnail.jpg">
+                <source src="/videos/Exploring Web Development_ Join My Journey! (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div> </div>
+</main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+
+  <footer class="footer mt-auto py-3 bg-light" style="position: relative;">
+    <div class="container text-center">
+      <span class="text-muted">&copy; 2024 Johan Dada. All Rights Reserved.</span>
+      <a href="#" class="ms-3"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/johan-dada-33bbb12ba/" class="ms-3"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

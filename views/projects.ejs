@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %> - My Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="/images/profile.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/custom.css' />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'home' ? 'active' : '' %>" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'about' ? 'active' : '' %>" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'projects' ? 'active' : '' %>" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= page === 'contact' ? 'active' : '' %>" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-4">
+    <h1 class="section-title">My Projects</h1>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <!-- <img src="/images/project1.jpg" alt="Project 1" class="project-image"> -->
+                <div class="project-content">
+                    <h2 class="project-title">Python Web Design.</h2>
+                    <p class="project-description">
+                        A website using python for different parts.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                    </div>
+                    <!-- <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <!-- <img src="/images/project2.jpg" alt="Project 2" class="project-image"> -->
+                <div class="project-content">
+                    <h2 class="project-title">HTML Portfolio.</h2>
+                    <p class="project-description">
+                        A collaborative task management application with real-time 
+                        updates and team features.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    
+                    </div>
+                    <!-- <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <!-- <img src="/images/project3.jpg" alt="Project 3" class="project-image"> -->
+                <div class="project-content">
+                    <h2 class="project-title">HTML Website creation.</h2>
+                    <p class="project-description">
+                        A website created with the use of Basic foundational HTML.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">HTML5</span>
+                    </div>
+                    <!-- <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <!-- <img src="/images/project4.jpg" alt="Project 4" class="project-image"> -->
+                <div class="project-content">
+                    <h2 class="project-title">Javascript to create a functional calculator.</h2>
+                    <p class="project-description">
+                        A simple calculator using JavaScript
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                    
+                    </div>
+                    <!-- <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container text-center">
+      <span class="text-muted">&copy; 2024 Johan Dada. All Rights Reserved.</span>
+      <a href="#" class="ms-3"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/johan-dada-33bbb12ba/" class="ms-3"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
